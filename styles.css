@@ -1,20 +1,31 @@
+:root {
+  --primary-color: black; 
+  --secondary-color: #2ecc71; 
+  --accent-color: #e74c3c; 
+  --background-color: #f5f5f5; 
+  --text-color: #333333; 
+  --navbar-background: rgba(255, 255, 255, 0.8);
+  --navbar-text-color: #333333;
+  --footer-background: #333333;
+  --footer-text-color: #ffffff;
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--background-color);;
+  color: var(--text-color);
   width: 100%;
   overflow-x: hidden; /* Ensure no horizontal scrollbars */
 }
 
 /* Navbar Container */
 .navbar {
-  background: rgba(6, 6, 6, 0.1); /* Semi-transparent background */
-  backdrop-filter: blur(30px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Optional: border for better visibility */
-  box-shadow: black;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glass effect */
+  backdrop-filter: blur(20px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(20px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass look */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   padding: 0.5rem 1rem;
   position: fixed;
   width: 100%;
@@ -22,7 +33,9 @@ body {
   left: 0;
   z-index: 1000;
   box-sizing: border-box; /* Prevent overflow due to padding */
+  border-radius: 10px; /* Rounded corners for softer appearance */
 }
+
 
 /* Navbar Inner Container */
 .navbar-container {
@@ -35,15 +48,17 @@ body {
 
 /* Logo */
 .navbar-logo {
-  color: #fff;
+  color: var(--navbar-text-color);
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: transition: color 0.3s, transform 0.2s, text-shadow 0.3s;
 }
 
 .navbar-logo:hover {
-  color: blue;
+  color: var(--accent-color); 
+  transform: scale(1.1); 
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Navbar List */
@@ -62,17 +77,17 @@ body {
 
 /* Navbar Link */
 .navbar-link {
-  color: #fff;
+  color: var(--navbar-text-color);
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.75rem 1rem;
   display: block;
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 .navbar-link:hover {
-  color: blue;
-  transform: scale(1);
+  color:var(--accent-color);
+  transform: scale(1.1);
 }
 
 .navbar-toggle {
@@ -87,12 +102,12 @@ body {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: blue;
+  background-color: var(--accent-color);
   transition: width 0.3s, left 0.3s;
 }
 
 .navbar-link.active {
-  color: blue;
+  color: var(--accent-color);
   transform: scale(1);
 }
 
@@ -110,7 +125,7 @@ body {
   display: flex;
   align-items: center;
   padding: 2rem;
-  background-color: #e0e0e0;
+  background-color:var(--background-color);
   margin: 1rem 0;
   border-radius: 8px;
   max-width: 1200px;
@@ -136,7 +151,7 @@ body {
   display: inline-block;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
-  background-color: #1e2a38;
+  background-color: #3498db;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -144,7 +159,7 @@ body {
 }
 
 .hero-text .btn:hover {
-  background-color: #3b4d6a;
+  background-color: var(--accent-color);
 }
 
 .hero-image {
@@ -166,7 +181,7 @@ body {
 
 .card {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -187,7 +202,7 @@ body {
 
 .card .btn {
   margin-top: 1rem;
-  background-color: #1e2a38;
+  background-color: #3498db;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
@@ -201,14 +216,14 @@ body {
 
 /* Button hover state with animation */
 .card .btn:hover {
-  background-color: #3b4d6a;
+  background-color: var(--accent-color);
   transform: scale(1.05); /* Slightly scale up */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
 
 footer {
-  background-color: #1e2a38;
-  color: #fff;
+  background-color: var(--footer-background);
+  color: var(--footer-text-color);
   text-align: center;
   padding: 0.3rem;
   position: static;
@@ -292,7 +307,7 @@ footer {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: white;
+    color: var(--primary-color);
     cursor: pointer;
     margin-top: -2px;
   }
@@ -368,7 +383,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   border-radius: 8px;
   margin: 2rem 0;
 }
@@ -379,8 +394,11 @@ footer {
 
 .intro-text h2 {
   font-size: 2rem;
+  text-align: center;
   margin: top 0;
+  color: var(--primary-color);
 }
+
 
 .intro-text p {
   font-size: 1rem;
@@ -396,7 +414,7 @@ footer {
 
 .highlight-card {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -408,6 +426,7 @@ footer {
 .highlight-card h3 {
   font-size: 2vw;
   margin-top: 0;
+  color: #3498db;
 }
 
 .highlight-card p {
@@ -480,7 +499,7 @@ footer {
 /* Cities */
 .cities-overview {
   padding: 2rem;
-  background-color: #e9e9e9;
+  background-color: var(--background-color);
   border-radius: 8px;
   margin: 2rem 0;
   text-align: center;
@@ -489,6 +508,7 @@ footer {
 .cities-overview h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
 .city-cards {
@@ -518,6 +538,7 @@ footer {
 .city-card h3 {
   font-size: 1.5rem;
   margin: 0.5rem 0;
+  color: #3498db;
 }
 
 .city-card p {
@@ -584,7 +605,7 @@ footer {
 /* Culture Overview Section */
 .culture-overview {
   padding: 2rem;
-  background-color: #f4f4f4;
+  background-color: var(--background-color);
   border-radius: 8px;
   margin: 2rem 0;
 }
@@ -593,6 +614,7 @@ footer {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  color: var(--primary-color);
 }
 
 .culture-content {
@@ -614,6 +636,7 @@ footer {
 .culture-section h3 {
   font-size: 1.5rem;
   margin-top: 0;
+  color: #3498db;
 }
 
 .culture-section p {
@@ -635,6 +658,7 @@ footer {
 .visuals-text h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
 .visuals-text p {
@@ -651,7 +675,7 @@ footer {
   width: 20vw;
   height: 30vh;
   border-radius: 8px;
-  border: 2px solid #ddd;
+  border: 1px solid black;
   margin: 1rem 0;
 }
 
@@ -729,7 +753,7 @@ footer {
 /* Artifacts Section */
 .artifacts {
   padding: 2rem;
-  background-color: #f4f4f4;
+  background-color: var(--background-color);
   border-radius: 8px;
   margin: 2rem 0;
 }
@@ -738,6 +762,7 @@ footer {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  color: var(--primary-color);
 }
 
 /* Artifacts Container */
@@ -774,7 +799,7 @@ footer {
 
 .artifact-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px var(--accent-color);
 }
 
 /* Responsive adjustments for screens smaller than 768px */
@@ -806,7 +831,7 @@ footer {
 
 .decline-overview {
   padding: 2rem;
-  background-color: #f4f4f4;
+  background-color: var(--background-color);
   border-radius: 8px;
   margin: 2rem 0;
   text-align: center;
@@ -815,6 +840,7 @@ footer {
 .decline-overview h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
 .decline-overview p {
@@ -831,7 +857,7 @@ footer {
 
 .theory-card {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -843,6 +869,7 @@ footer {
 .theory-card h3 {
   font-size: 1.5rem;
   margin-top: 0;
+  color: #3498db;
 }
 
 .theory-card p {
@@ -870,7 +897,7 @@ footer {
   max-width: 45%;
   height: auto;
   border-radius: 8px;
-  border: 2px solid #ddd;
+  border: 1px solid black;
   margin: 1rem 0;
 }
 

@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get all the navbar links
     var navbarLinks = document.querySelectorAll('.navbar-link');
 
+    // Check if currentPath is just the root ("/")
+    if (currentPath === '/' || currentPath === '/index.html') {
+        // Set the index page as the active link when the user visits for the first time
+        currentPath = '/index.html';  // Assuming index.html is your home page
+    }
+
     // Loop through each link
     navbarLinks.forEach(function(link) {
         // Check if the link href matches the current URL path
@@ -26,4 +32,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
