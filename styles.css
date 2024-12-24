@@ -1,12 +1,12 @@
 :root {
-  --primary-color: black; 
+  --primary-color: #392613; 
   --secondary-color: #2ecc71; 
-  --accent-color: #e74c3c; 
-  --background-color: #f5f5f5; 
-  --text-color: #333333; 
-  --navbar-background: rgba(255, 255, 255, 0.8);
-  --navbar-text-color: #333333;
-  --footer-background: #333333;
+  --accent-color: #c1121f; 
+  --background-color: #fdf0d5; 
+  --text-color: #003049; 
+  --navbar-background: #e6ccb3;
+  --navbar-text-color: #780000;
+  --footer-background: black;
   --footer-text-color: #ffffff;
 
 body {
@@ -26,7 +26,7 @@ body {
   -webkit-backdrop-filter: blur(20px); /* For Safari */
   border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass look */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   position: fixed;
   width: 100%;
   top: 0;
@@ -48,11 +48,11 @@ body {
 
 /* Logo */
 .navbar-logo {
-  color: var(--navbar-text-color);
+  color: #780000;
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: bold;
-  transition: transition: color 0.3s, transform 0.2s, text-shadow 0.3s;
+  transition: color 0.3s, transform 0.2s, text-shadow 0.3s;
 }
 
 .navbar-logo:hover {
@@ -80,7 +80,7 @@ body {
   color: var(--navbar-text-color);
   text-decoration: none;
   font-size: 1.1rem;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.75rem;
   display: block;
   transition: color 0.3s, transform 0.2s;
 }
@@ -130,8 +130,9 @@ body {
   border-radius: 8px;
   max-width: 1200px;
   margin: 0 auto; /* Ensure centering */
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
+
 
 .hero-text {
   max-width: 50%;
@@ -151,7 +152,7 @@ body {
   display: inline-block;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
-  background-color: #3498db;
+  background-color: #780000;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -159,7 +160,9 @@ body {
 }
 
 .hero-text .btn:hover {
-  background-color: var(--accent-color);
+  background: linear-gradient(90deg, #ff7f50, #ff4500); 
+  color: #fff; 
+  box-shadow: 0 8px 15px rgba(255, 69, 0, 0.3); 
 }
 
 .hero-image {
@@ -167,65 +170,17 @@ body {
   height: auto;
   border-radius: 8px;
   margin-top: 4%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 20px rgba(5, 5, 5, 0.2);
+  
 }
 
-.info-cards {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.card {
-  background: #fff;
-  border: 1px solid black;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  width: 30%;
-  text-align: center;
-  box-sizing: border-box;
-  margin: 5px;
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 1.3rem;
-}
-
-.card p {
-  font-size: 1rem;
-}
-
-.card .btn {
-  margin-top: 1rem;
-  background-color: #3498db;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-/* Button hover state with animation */
-.card .btn:hover {
-  background-color: var(--accent-color);
-  transform: scale(1.05); /* Slightly scale up */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-}
 
 footer {
   background-color: var(--footer-background);
-  color: var(--footer-text-color);
+  color: white;
   text-align: center;
-  padding: 0.3rem;
+  padding: 0.1rem;
   position: static;
   width: 100%;
   bottom: 0;
@@ -297,7 +252,7 @@ footer {
   }
 
   .navbar-logo {
-    text-shadow: 2px solid black;
+    padding-left: 3rem;
     font-size: 1.5rem;
     margin-top: 3px;
   }
@@ -348,7 +303,7 @@ footer {
 
   .hero-text {
     max-width: 100%;
-    margin-top: 2rem;
+    margin-top: -5rem;
   }
 
   .hero-text h2 {
@@ -382,6 +337,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
   padding: 2rem;
   background-color: var(--background-color);
   border-radius: 8px;
@@ -390,6 +346,10 @@ footer {
 
 .intro-text {
   max-width: 100%;
+  border: 2px solid black;
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .intro-text h2 {
@@ -403,6 +363,7 @@ footer {
 .intro-text p {
   font-size: 1rem;
   line-height: 1.6;
+  color: #003049;
 }
 
 .highlights {
@@ -413,7 +374,7 @@ footer {
 }
 
 .highlight-card {
-  background: #fff;
+  background: #fbeccd;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -426,11 +387,12 @@ footer {
 .highlight-card h3 {
   font-size: 2vw;
   margin-top: 0;
-  color: #3498db;
+  color: #392613;
 }
 
 .highlight-card p {
   font-size: 1rem;
+  color: #003049;
 }
 
 /* Media Queries for Mobile Responsiveness */
@@ -451,7 +413,8 @@ footer {
   .highlights {
     flex-direction: column; /* Stack highlight cards vertically */
     padding: 2.5rem;
-    /* Adjust padding */
+    padding-left: 18px;
+    margin-top: 15px;
   }
 
   .highlight-card {
@@ -469,9 +432,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .intro {
-    padding: 0.5rem;
-  }
+ 
 
   .intro-text h2 {
     font-size: 1.4rem;
@@ -498,6 +459,7 @@ footer {
 
 /* Cities */
 .cities-overview {
+  
   padding: 2rem;
   background-color: var(--background-color);
   border-radius: 8px;
@@ -513,13 +475,14 @@ footer {
 
 .city-cards {
   display: flex;
+  
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .city-card {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #fbeccd;
+  border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -538,12 +501,13 @@ footer {
 .city-card h3 {
   font-size: 1.5rem;
   margin: 0.5rem 0;
-  color: #3498db;
+  color: #392613;
 }
 
 .city-card p {
   font-size: 1rem;
   line-height: 1.6;
+  color: #003049;
 }
 
 .city-card:hover {
@@ -598,6 +562,7 @@ footer {
 
   .city-card p {
     font-size: 1rem;
+    color: #003049;
   }
 }
 
@@ -625,8 +590,8 @@ footer {
 
 /* Individual Culture Sections */
 .culture-section {
-  background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid black;
+  background: #fbeccd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -636,12 +601,13 @@ footer {
 .culture-section h3 {
   font-size: 1.5rem;
   margin-top: 0;
-  color: #3498db;
+  color: #392613;
 }
 
 .culture-section p {
   font-size: 1rem;
   line-height: 1.6;
+  color: #003049;
 }
 
 .culture-section:hover {
@@ -651,6 +617,7 @@ footer {
 
 /* Visuals Section */
 .culture-visuals {
+  border-top: 2px solid black;
   text-align: center;
   padding: 2rem;
 }
@@ -663,6 +630,7 @@ footer {
 
 .visuals-text p {
   font-size: 1rem;
+  color: #003049;
 }
 
 .visuals-images {
@@ -728,6 +696,8 @@ footer {
 
   .culture-section h3 {
     font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
   }
 
   .culture-section p {
@@ -740,12 +710,19 @@ footer {
   }
 
   .visuals-images {
-    gap: 1rem;
+    display: flex; /* Enables flexbox */
+    flex-direction: row; /* Stacks items vertically */
+    gap: 1rem; /* Adds space between images */
+    align-items: center;
+    
   }
 
   .visuals-images img {
-    width: 100%;
-    height: 100%;
+    width: auto; /* Keeps the natural width of the image */
+    max-width: 100%; /* Ensures images don't exceed container width */
+    height: auto; /* Maintains the image's aspect ratio */
+    max-height: 400px; /* Optional: Restricts the height for consistency */
+    object-fit: cover;
   }
 }
 
@@ -774,6 +751,7 @@ footer {
 
 /* Artifact Item */
 .artifact-item {
+  
   width: 22%;
   margin: 1rem 0;
   text-align: center;
@@ -795,11 +773,12 @@ footer {
   padding: 0.5rem;
   font-size: 1rem;
   margin: 0;
+  color: #003049;
 }
 
 .artifact-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px var(--accent-color);
+  box-shadow: 0 7px 15px var(--accent-color);
 }
 
 /* Responsive adjustments for screens smaller than 768px */
@@ -830,6 +809,7 @@ footer {
 /* Decline */
 
 .decline-overview {
+  
   padding: 2rem;
   background-color: var(--background-color);
   border-radius: 8px;
@@ -846,9 +826,11 @@ footer {
 .decline-overview p {
   font-size: 1.1rem;
   line-height: 1.6;
+  color: #003049;
 }
 
 .decline-theories {
+  border-bottom: 2px solid black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -856,7 +838,7 @@ footer {
 }
 
 .theory-card {
-  background: #fff;
+  background: #fbeccd;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -869,12 +851,13 @@ footer {
 .theory-card h3 {
   font-size: 1.5rem;
   margin-top: 0;
-  color: #3498db;
+  color: #392613;
 }
 
 .theory-card p {
   font-size: 1rem;
   line-height: 1.6;
+  color: #003049;
 }
 
 .visuals {
