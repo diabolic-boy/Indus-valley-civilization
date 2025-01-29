@@ -2,7 +2,7 @@
   --primary-color: #392613; 
   --secondary-color: #2ecc71; 
   --accent-color: #c1121f; 
-  --background-color: #fdf0d5; 
+  --background-color: #f5f5f5; 
   --text-color: #003049; 
   --navbar-background: #e6ccb3;
   --navbar-text-color: #780000;
@@ -374,7 +374,7 @@ footer {
 }
 
 .highlight-card {
-  background: #fbeccd;
+  background: #fff;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -481,7 +481,7 @@ footer {
 }
 
 .city-card {
-  background: #fbeccd;
+  background: #fff;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -591,7 +591,7 @@ footer {
 /* Individual Culture Sections */
 .culture-section {
   border: 1px solid black;
-  background: #fbeccd;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -838,7 +838,7 @@ footer {
 }
 
 .theory-card {
-  background: #fbeccd;
+  background: #fff;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
